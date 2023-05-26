@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import MainPage from '../mainPage/MainPage';
+import { useNavigate } from 'react-router-dom';
 import Cafe from '../cafe/Cafe';
 
 function Login() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
-
+  const navigate = useNavigate();
   const handleSubmit = async (event) => {
     event.preventDefault();
     console.log(event.target.email.value);
@@ -27,7 +27,7 @@ function Login() {
 
   if (isLoggedIn) {
     //Navigate to the cafe page using react router
-    return <Cafe />;
+    navigate('/cafe');
   }
 
   return (
