@@ -1,0 +1,17 @@
+/* gray rectangle with outlines*/
+.loginSpace {
+    background-color: #E5E5E5;
+    border:1px solid black;
+    width: 50rem;
+}
+
+.signin {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.footertext {
+    padding-top: 4rem;
+}
