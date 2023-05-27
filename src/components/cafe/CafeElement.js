@@ -1,13 +1,18 @@
+import React from 'react';
 
-function CafeElement(props) {
-    // This returns an entry in a table
-    return (
-        <tr>
-            <td>{props.cafe.nombre}</td>
-            <td>{props.cafe.tipo}</td>
-            <td>{props.cafe.region}</td>
-        </tr>
-    );  
+function CafeElement({ props, onClick }) {
+  const handleClick = () => {
+    onClick(props.id);
+  };
+
+  return (
+    <tr onClick={handleClick}>
+      <td>{props.id}</td>
+      <td>{props.nombre}</td>
+      <td>{props.tipo}</td>
+      <td>{props.region}</td>
+    </tr>
+  );
 }
 
 export default CafeElement;
