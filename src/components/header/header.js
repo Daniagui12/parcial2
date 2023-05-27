@@ -7,7 +7,7 @@ function Header() {
     return (
         <div>
             <Navbar bg="light" variant="light" className="navbar">
-                <Navbar.Brand href="#home" className='MainH1'>El Aroma Magico</Navbar.Brand>
+                <Navbar.Brand href="/" className='MainH1'>El Aroma Magico</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                 </Navbar.Collapse>

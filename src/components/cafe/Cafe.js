@@ -37,7 +37,7 @@ function Cafe() {
       <Header />
       <Container>
         <Row>
-          <Col md={8}>
+          <Col md={8} className="firstColumnTable">
             <table className="table table-striped">
               <thead style={{ backgroundColor: '#343a40', color: 'white' }}>
                 <tr>
@@ -59,21 +59,30 @@ function Cafe() {
             </table>
           </Col>
           <Col md={4}>
-            {selectedCafe ? (
-              <Card>
-                <Card.Body>
-                  <Card.Title>{selectedCafe.nombre}</Card.Title>
-                  <Card.Img variant="top" src={selectedCafe.imagen} className='imageCard'/>
-                  <Card.Text>Fecha Cultivo: {selectedCafe.fecha_cultivo}</Card.Text>
-                  <Card.Text>Altura: {selectedCafe.altura}</Card.Text>
-                  <Card.Text>Notas: {selectedCafe.notas}</Card.Text>
-                </Card.Body>
-              </Card>
-            ) : (
-              <div style={{ backgroundColor: 'white' }}>
-                <p>No cafe selected</p>
-              </div>
-            )}
+            <div className="detailContainer">
+              {selectedCafe ? (
+                <Card style={{ backgroundColor: '#f2f2f2' }}>
+                  <Card.Body>
+                    <Card.Title className="titleCard" style={{ fontWeight: 'bold', fontSize: '15px' }}>{selectedCafe.nombre}</Card.Title>
+                    <Card.Text>{selectedCafe.fecha_cultivo}</Card.Text>
+                    <div className="imageContainer">
+                      <Card.Img
+                        variant="top"
+                        src={selectedCafe.imagen}
+                        alt="Cafe Image"
+                        className="imageCard"
+                      />
+                    </div>
+                    <Card.Text>Notas</Card.Text>
+                    <Card.Text>{selectedCafe.notas}</Card.Text>
+                    <Card.Text style={{ fontWeight: 'bold', fontSize: '15px' }}>Cultivado a una altura de</Card.Text>
+                    <Card.Text style={{ fontWeight: 'bold', fontSize: '15px' }}>{selectedCafe.altura} msnm</Card.Text>
+                  </Card.Body>
+                </Card>
+              ) : (
+                <div className="empty-card"></div>
+              )}
+            </div>
           </Col>
         </Row>
       </Container>
