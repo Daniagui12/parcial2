@@ -34,11 +34,6 @@ function Login() {
     navigate('/cafe');
   }
 
-  else {
-    // Update component to display error message
-
-  }
-
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-3">
