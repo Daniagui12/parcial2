@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { FormattedMessage } from 'react-intl';
 
 function Login() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -31,7 +32,9 @@ function Login() {
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-3">
-        <label className = "passwordT" style = {{paddingRight: "39.5rem", fontFamily: "Inter", fontWeight: "bold"}}>Nombre de usuario</label>
+        <label className = "passwordT" style = {{paddingRight: "39.5rem", fontFamily: "Inter", fontWeight: "bold"}}>
+          <FormattedMessage id="Inicio de sesion" />
+        </label>
         <div className='passwordSpace'>
           <input
             name="email"
@@ -42,7 +45,9 @@ function Login() {
         </div>
       </div>
       <div className="mb-3">
-        <label className = "passwordT" style = {{paddingRight: "43rem", fontFamily: "Inter", fontWeight: "bold"}}>Contraseña</label>
+        <label className = "passwordT" style = {{paddingRight: "43rem", fontFamily: "Inter", fontWeight: "bold"}}>
+          <FormattedMessage id="Contraseña"/>
+        </label>
         <div className='passwordSpace'>
           <input
             name="password"
@@ -54,7 +59,7 @@ function Login() {
       </div>
       <div className="d-grid">
         <button type="submit" className="btn btn-primary">
-          Ingresar
+          <FormattedMessage id="Inicio de sesion"/>
         </button>
       </div>
     </form>

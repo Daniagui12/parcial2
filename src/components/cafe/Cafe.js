@@ -3,6 +3,7 @@ import './Cafe.css';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import Header from '../header/header';
 import CafeElement from './CafeElement';
+import { FormattedDate, FormattedMessage } from 'react-intl';
 
 function Cafe() {
   const [state, setState] = useState([]);
@@ -42,9 +43,15 @@ function Cafe() {
               <thead style={{ backgroundColor: '#343a40', color: 'white' }}>
                 <tr>
                   <th>#</th>
-                  <th>Nombre</th>
-                  <th>Tipo</th>
-                  <th>Region</th>
+                  <th>
+                    <FormattedMessage id="Nombre" />
+                  </th>
+                  <th>
+                    <FormattedMessage id="Tipo" />
+                  </th>
+                  <th>
+                    <FormattedMessage id="Region" />
+                  </th>
                 </tr>
               </thead>
               <tbody>
@@ -64,7 +71,11 @@ function Cafe() {
                 <Card style={{ backgroundColor: '#f2f2f2' }}>
                   <Card.Body>
                     <Card.Title className="titleCard" style={{ fontWeight: 'bold', fontSize: '15px' }}>{selectedCafe.nombre}</Card.Title>
-                    <Card.Text>{selectedCafe.fecha_cultivo}</Card.Text>
+                    <Card.Text>
+                      <FormattedDate>
+                        value={selectedCafe.fecha_cultivo}
+                      </FormattedDate>
+                      </Card.Text>
                     <div className="imageContainer">
                       <Card.Img
                         variant="top"
@@ -73,10 +84,16 @@ function Cafe() {
                         className="imageCard"
                       />
                     </div>
-                    <Card.Text>Notas</Card.Text>
+                    <Card.Text>
+                      <FormattedMessage id="Notas"/>
+                    </Card.Text>
                     <Card.Text>{selectedCafe.notas}</Card.Text>
-                    <Card.Text style={{ fontWeight: 'bold', fontSize: '15px' }}>Cultivado a una altura de</Card.Text>
-                    <Card.Text style={{ fontWeight: 'bold', fontSize: '15px' }}>{selectedCafe.altura} msnm</Card.Text>
+                    <Card.Text style={{ fontWeight: 'bold', fontSize: '15px' }}>
+                      <FormattedMessage id="Harvest" />
+                    </Card.Text>
+                    <Card.Text style={{ fontWeight: 'bold', fontSize: '15px' }}>{selectedCafe.altura} 
+                      <FormattedMessage id="msnm" />
+                    </Card.Text>
                   </Card.Body>
                 </Card>
               ) : (
