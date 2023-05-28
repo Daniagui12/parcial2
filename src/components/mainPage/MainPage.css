@@ -3,6 +3,7 @@
     background-color: #E5E5E5;
     border:1px solid black;
     width: 50rem;
+    align-items: left;
 }
 
 .signin {
@@ -14,4 +15,14 @@
 
 .footertext {
     padding-top: 4rem;
+}
+
+.inicioSesion {
+    padding-right: 41rem;
+    font-family: 'Inter';
+    font-size: 1.25rem;
+    padding-top: 2rem;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
 }

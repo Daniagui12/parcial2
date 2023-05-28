@@ -1,13 +1,12 @@
 import React from 'react';
-import Login from '../login/Login';
-import { Nav, Navbar } from 'react-bootstrap';
+import { Navbar } from 'react-bootstrap';
 import './header.css';
 
 function Header() {
     return (
         <div>
             <Navbar bg="light" variant="light" className="navbar">
-                <Navbar.Brand href="/" className='MainH1'>El Aroma Magico</Navbar.Brand>
+                <Navbar.Brand href="/" className='MainH1' style={{fontSize:'30px'}}>El aroma mágico</Navbar.Brand>
                 <Navbar.Toggle />
                 <Navbar.Collapse className="justify-content-end">
                 </Navbar.Collapse>

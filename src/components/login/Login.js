@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import Cafe from '../cafe/Cafe';
 
 function Login() {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -26,30 +25,32 @@ function Login() {
   };
 
   if (isLoggedIn) {
-    //Navigate to the cafe page using react router
     navigate('/cafe');
   }
 
   return (
     <form onSubmit={handleSubmit}>
       <div className="mb-3">
-        <label>Nombre de usuario</label>
-        <input
-          name="email"
-          type="username"
-          className="form-control"
-          required
-        />
+        <label className = "passwordT" style = {{paddingRight: "39.5rem", fontFamily: "Inter", fontWeight: "bold"}}>Nombre de usuario</label>
+        <div className='passwordSpace'>
+          <input
+            name="email"
+            type="username"
+            className="textLogin"
+            required
+          />
+        </div>
       </div>
       <div className="mb-3">
-        <label>Contraseña</label>
-        <input
-          name="password"
-          type="password"
-          className="form-control"
-          placeholder="Enter password"
-          required
-        />
+        <label className = "passwordT" style = {{paddingRight: "43rem", fontFamily: "Inter", fontWeight: "bold"}}>Contraseña</label>
+        <div className='passwordSpace'>
+          <input
+            name="password"
+            type="password"
+            className="textLogin"
+            required
+          />
+        </div>
       </div>
       <div className="d-grid">
         <button type="submit" className="btn btn-primary">
