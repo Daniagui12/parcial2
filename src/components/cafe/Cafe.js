@@ -4,6 +4,7 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import Header from '../header/header';
 import CafeElement from './CafeElement';
 import { FormattedDate, FormattedMessage } from 'react-intl';
+import Footer from '../footer/Footer';
 
 function Cafe() {
   const [state, setState] = useState([]);
@@ -103,6 +104,7 @@ function Cafe() {
           </Col>
         </Row>
       </Container>
+      <Footer />
     </div>
   );
 }

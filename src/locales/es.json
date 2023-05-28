@@ -6,6 +6,9 @@
     "Tipo": "Tipo",
     "Region": "Región",
     "Inicio de sesion": "Inicio de sesión",
+    "Iniciar Sesion": "Ingresar",
     "Nombre de usuario": "Nombre de usuario",
-    "Contraseña": "Contraseña"
+    "Contraseña": "Contraseña",
+    "Cancelar": "Cancelar",
+    "Error": "Error de autenticación. Revise sus credenciales"
 }

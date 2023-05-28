@@ -6,6 +6,9 @@
     "Tipo": "Type",
     "Region": "Region",
     "Inicio de sesion": "Sign In",
+    "Iniciar Sesion": "Log In",
     "Nombre de usuario": "Username",
-    "Contraseña": "Password"
+    "Contraseña": "Password",
+    "Cancelar": "Cancel",
+    "Error": "Authentication Error. Check your credentials"
 }

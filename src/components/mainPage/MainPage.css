@@ -1,9 +1,14 @@
 /* gray rectangle with outlines*/
 .loginSpace {
-    background-color: #E5E5E5;
+    background-color: #E0BBBB;
     border:1px solid black;
     width: 50rem;
     align-items: left;
+    height: 17rem;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .signin {
@@ -13,12 +18,8 @@
     justify-content: center;
 }
 
-.footertext {
-    padding-top: 4rem;
-}
-
 .inicioSesion {
-    padding-right: 41rem;
+    padding-right: 42rem;
     font-family: 'Inter';
     font-size: 1.25rem;
     padding-top: 2rem;
